@@ -7,7 +7,7 @@ public class cFil implements Runnable {
     int aTemporitzacio;
 
     public cFil(String pNomFil) {
-        aTemporitzacio = 100;
+        aTemporitzacio = 500;
         aNomFil = pNomFil;
     }
 
