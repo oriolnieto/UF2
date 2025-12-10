@@ -34,6 +34,13 @@ public class cFilPrincipal {
             System.out.println("Fil secundari " + (i+1) + " iniciat.");
         }
 
+        for (int i = 0; i < pFills; i++) {
+            try {
+                fills[i].join(); // s'ha de fer el join apart perque si n'ho es fa tot sincronitzat es a dir, es fa de forma secuencial, fins que no acabi el 1 no es fara el 2, en canvi si ho fem amb un bucle extern, inicia els 5 seguits
+            } catch (InterruptedException e) {
+                System.out.println("Error fent el Join!");
+            }
+        }
 
         System.out.println("Iniciant execució procés principal");
 
