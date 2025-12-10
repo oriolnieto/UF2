@@ -1,22 +1,39 @@
 package UF2;
 
 import UF2.cFil;
+import java.util.Scanner;
 
 public class cFilPrincipal {
 
     public static void main(String[] pArguments) {
 
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Cuants processos fills vols iniciar?");
+        int pFills = scan.nextInt();
+
+        while (pFills >= 15) {
+            System.out.println("Que no sigui superior o igual a 15!");
+            System.out.println("Cuants processos fills vols iniciar?");
+            pFills = scan.nextInt();
+        }
+
+        Thread[] fills = new Thread[pFills];
+
         System.out.println("Fil principal iniciat.");
-        System.out.println("Fil secundari iniciat.");
 
-        cFil vObjecteFil = new cFil("#1");
-        vObjecteFil.sTemporitzacio(100);
+        int t = 0;
 
-        // alternativa: innecessari
-        Thread vFil = new Thread(vObjecteFil);
+        for (int i = 0; i < pFills; i++) {
+            cFil vObjecteFil = new cFil("#" + (i+1));
+            t += 100;
+            vObjecteFil.sTemporitzacio(t);
+            // alternativa: innecessari
+            fills[i] = new Thread(vObjecteFil);
+            fills[i].start();
+            System.out.println("Fil secundari " + (i+1) + " iniciat.");
+        }
 
-        // alternativa: vObjecteFil
-        vFil.start();
 
         System.out.println("Iniciant execució procés principal");
 
