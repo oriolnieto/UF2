@@ -1,6 +1,25 @@
 package UF2;
 
-import UF2.cFil;
+import UF2.cFil; // importada la classe Cfil
+
+/* És la classe principal del projecte. Crea i executa un procés fill. Aquesta classe treballa
+   les dues pràctiques posteriors de l'activitat. Aqui existeixen dos fils d'execució en paral·lel,
+   el procediment principal/main i el procediment run() de la classe Cfil. És per això que és necessari
+   importar com a llibreria la classe Cfil per poder executar aquest mètode.
+
+   1.3 Tot i que no és una norma obligatòria, és recomanable que el procès pare sempre acabi després
+       de qualsevol dels seus processos fills. La classe principal s'ha de modificar per investigar quins
+       métodes proporciona la classe Thread.
+
+   1.4 Necessariàment modificar la classe principal de manera que aquesta inicï l'execució de tants processos
+       fills com l'usuari indiqui. L'usuari indica quants mitjançant un paràmetre del procediment main o per consola.
+
+   Amb el métode corresponent de la classe Cfil per a que cada procès fill iniciat per el procés pare tingui una temporització
+   diferent. Primerament el procès fill, el més petit, fins a l'ultim amb major temporització successivament.
+   El procès pare no finalitza fins que tots el processos fills no hagin acabat la seva execució.
+   Per no sobrecarregar s'ha d'indica un limit per a que l'usuari no pugui introduir un nombre de processos fills superior aquest i
+   no majoritàriament gran. 
+* */
 
 public class cFilPrincipal {
 

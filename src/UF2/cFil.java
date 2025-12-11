@@ -25,10 +25,12 @@ public class cFil implements Runnable {
         aNomFil = pNomFil;
     }
 
+    // getter
     public String gNomFil() {
         return aNomFil;
     }
 
+    // setter
     public void sTemporitzacio(int pTemporitzacio) {
         aTemporitzacio = pTemporitzacio;
     }
