@@ -12,6 +12,7 @@ public class cFilPrincipal {
         System.out.println("Cuants processos fills vols iniciar?");
         int pFills = scan.nextInt();
 
+        // limit -> 15
         while (pFills >= 15) {
             System.out.println("Que no sigui superior o igual a 15!");
             System.out.println("Cuants processos fills vols iniciar?");
@@ -22,6 +23,7 @@ public class cFilPrincipal {
 
         System.out.println("Fil principal iniciat.");
 
+        // comptador de temporització
         int t = 0;
 
         for (int i = 0; i < pFills; i++) {
