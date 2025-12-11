@@ -11,6 +11,9 @@ public class cFilPrincipal {
 
         cFil vObjecteFil = new cFil("#1");
         vObjecteFil.sTemporitzacio(1000);
+        /* la variable de l'objecte fil de la classe es modifica el setter de temporització de 500 a 1000
+           Aquesta modificació permet que la execució del fill finalitzi despres que la del pare
+        */
 
         // alternativa: innecessari
         Thread vFil = new Thread(vObjecteFil);
