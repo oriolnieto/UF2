@@ -17,7 +17,10 @@ public class cFilPrincipal {
 
         // alternativa: vObjecteFil
         vFil.start();
-        vFil.join();  // ho podriem fer tantejant els milisegons amb el sleep del procés principal (pare), pero apart de que no estaria sincronitzat i imprecis, utilitzem join per basicament dir al procés pare que s'ha de esperar al procés fill a que acabi, li podem passar per parametre milisegons de espera també.
+        vFil.join();
+        // ho podriem fer tantejant els milisegons amb el sleep del procés principal (pare),
+        // pero apart de que no estaria sincronitzat i imprecis, utilitzem join per basicament
+        // dir al procés pare que s'ha de esperar al procés fill a que acabi, li podem passar per parametre milisegons de espera també.
 
         System.out.println("Iniciant execució procés principal");
 
